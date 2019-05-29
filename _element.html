@@ -1,0 +1,36 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="ejemplo-eunice">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * `ejemplo-eunice`
+     * 
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class EjemploEunice extends Polymer.Element {
+      static get is() { return 'ejemplo-eunice'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'ejemplo-eunice'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(EjemploEunice.is, EjemploEunice);
+  </script>
+</dom-module>
